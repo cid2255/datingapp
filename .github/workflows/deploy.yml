@@ -26,11 +26,11 @@ jobs:
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
       run: |
         echo "Logging into Firebase"
-        firebase login:ci --token $FIREBASE_TOKEN
+        firebase login:ci --token ${{ env.FIREBASE_TOKEN }}
 
     - name: Deploy to Firebase
       env:
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
       run: |
         echo "Deploying to Firebase"
-        firebase deploy
+        firebase deploy --token ${{ env.FIREBASE_TOKEN }}
