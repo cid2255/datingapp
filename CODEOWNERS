@@ -1,0 +1,15 @@
+# Android app code
+app/src/main/java/* @android-team
+
+# Firebase Functions
+functions/* @backend-team
+
+# Web Admin Panel
+public/admin/* @admin-team
+
+# Build files
+*.gradle.kts @android-team
+build.gradle.kts @android-team
+
+# All other files
+* @all-contributors
