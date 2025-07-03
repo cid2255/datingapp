@@ -1,0 +1,30 @@
+name: Deploy to Firebase
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+
+    - name: Install Firebase CLI
+      run: npm install -g firebase-tools
+
+    - name: Login to Firebase
+      run: firebase login:ci --token ${{ secrets.FIREBASE_TOKEN }}
+
+    - name: Deploy to Firebase
+      run: firebase deploy
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
