@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">dating app</string>
+    <string name="register">Register</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="about_me">About Me</string>
+    <string name="interests">Interests</string>
+    <string name="add_photo">Add Photo</string>
+    <string name="select_photo">Select Photo</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="profile_updated">Profile updated successfully</string>
+    <string name="error">Error</string>
+    <string name="please_fill_all_fields">Please fill in all fields</string>
+    <string name="select_interests">Select your interests</string>
+    <string name="add_interest">Add Interest</string>
+    <string name="remove_interest">Remove Interest</string>
+    <string name="search_users">Search Users</string>
+    <string name="filters">Filters</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="no_users_found">No users found</string>
+    <string name="loading_users">Loading users...</string>
+    <string name="like">Like</string>
+    <string name="liked">Liked</string>
+    <string name="age">Age</string>
+    <string name="location">Location</string>
+    <string name="about">About</string>
+    <string name="username">Username</string>
+</resources>

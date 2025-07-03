@@ -1,0 +1,41 @@
+# Android
+.gradle/
+.idea/
+*.iml
+*.iws
+*.ipr
+*.class
+*.log
+*.apk
+*.ap_
+*.dex
+*.externalNativeBuild/
+*.build/
+
+# Firebase
+firestore.indexes.json
+firestore.rules
+
+# IDE
+.local.properties
+.DS_Store
+
+# Sensitive files
+*.keystore
+*.jks
+*.p12
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Test files
+/test/
+/androidTest/
+
+# Gradle cache
+.gradle/
+.gradle/caches/
+.gradle/wrapper/

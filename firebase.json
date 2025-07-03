@@ -1,0 +1,215 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "headers": [
+      {
+        "source": "**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=31536000"
+          },
+          {
+            "key": "Strict-Transport-Security",
+            "value": "max-age=31536000; includeSubDomains; preload"
+          },
+          {
+            "key": "X-Content-Type-Options",
+            "value": "nosniff"
+          },
+          {
+            "key": "X-Frame-Options",
+            "value": "DENY"
+          },
+          {
+            "key": "X-XSS-Protection",
+            "value": "1; mode=block"
+          },
+          {
+            "key": "X-Content-Security-Policy",
+            "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://*.firebaseio.com https://*.googleapis.com;"
+          },
+          {
+            "key": "Referrer-Policy",
+            "value": "strict-origin-when-cross-origin"
+          },
+          {
+            "key": "Permissions-Policy",
+            "value": "geolocation=(self), microphone=(self), camera=(self)"
+          }
+        ]
+      }
+    ],
+    "cleanUrls": true,
+    "trailingSlash": false
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json",
+    "backup": {
+      "enabled": true,
+      "daily": true,
+      "weekly": true,
+      "monthly": true,
+      "retention": 30
+    },
+    "cache": {
+      "enabled": true,
+      "maxSizeBytes": 100000000,
+      "ttl": 3600
+    },
+    "security": {
+      "rulesVersion": "2",
+      "ruleset": "production",
+      "debug": false
+    }
+  },
+  "functions": {
+    "predeploy": [
+      "npm --prefix \"$RESOURCE_DIR\" run lint"
+    ],
+    "source": "functions",
+    "runtime": "nodejs18",
+    "memory": "256MB",
+    "timeout": "60s",
+    "concurrency": 100,
+    "minInstances": 1,
+    "maxInstances": 10,
+    "vpc": {
+      "connector": "my-vpc-connector",
+      "egressSettings": "PRIVATE_RANGES_ONLY"
+    },
+    "regions": ["us-central1", "europe-west1", "asia-east2"],
+    "environmentVariables": {
+      "NODE_ENV": "production",
+      "DEBUG": "false"
+    }
+  },
+  "storage": {
+    "rules": "storage.rules",
+    "maxUploadSize": "2GB",
+    "maxDownloadSize": "2GB",
+    "cors": {
+      "enabled": true,
+      "maxAge": 3600,
+      "methods": ["GET", "HEAD", "PUT", "POST", "DELETE"],
+      "origins": ["*"],
+      "headers": ["*"]
+    },
+    "lifecycle": {
+      "rules": [
+        {
+          "action": {
+            "type": "Delete"
+          },
+          "condition": {
+            "age": 30
+          }
+        }
+      ]
+    }
+  },
+  "emulators": {
+    "functions": {
+      "port": 5001,
+      "host": "localhost",
+      "inspectFunctions": true,
+      "debug": true
+    },
+    "firestore": {
+      "port": 8080,
+      "host": "localhost",
+      "rules": true,
+      "seed": true
+    },
+    "hosting": {
+      "port": 5000,
+      "host": "localhost"
+    },
+    "pubsub": {
+      "port": 8085,
+      "host": "localhost"
+    },
+    "ui": {
+      "enabled": true,
+      "port": 4000,
+      "host": "localhost"
+    },
+    "singleProjectMode": true,
+    "useFunctionsEmulator": true,
+    "useFirestoreEmulator": true,
+    "useHostingEmulator": true,
+    "usePubsubEmulator": true
+  },
+  "database": {
+    "rules": "database.rules.json",
+    "persistence": true,
+    "offline": true
+  },
+  "auth": {
+    "rules": "auth.rules.json",
+    "providers": [
+      "google",
+      "facebook",
+      "apple",
+      "twitter",
+      "github",
+      "phone",
+      "email"
+    ],
+    "sessionLength": "30d",
+    "anonymous": true
+  },
+  "remoteConfig": {
+    "template": "remote-config-template.json",
+    "conditions": [
+      {
+        "name": "ios",
+        "expression": "app.in(\"ios\")"
+      },
+      {
+        "name": "android",
+        "expression": "app.in(\"android\")"
+      },
+      {
+        "name": "premium",
+        "expression": "user.in(\"premium\")"
+      }
+    ]
+  },
+  "crashlytics": {
+    "enabled": true,
+    "debug": false,
+    "collectReports": true
+  },
+  "performance": {
+    "enabled": true,
+    "samplingRate": 0.1,
+    "networkRequests": true,
+    "traces": true
+  },
+  "analytics": {
+    "enabled": true,
+    "debug": false,
+    "samplingRate": 0.1,
+    "dataCollection": true
+  },
+  "messaging": {
+    "enabled": true,
+    "fcm": {
+      "vapidKey": "your-vapid-key",
+      "senderId": "your-sender-id"
+    }
+  }
+}

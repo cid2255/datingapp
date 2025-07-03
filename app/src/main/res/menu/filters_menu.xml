@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/filter_all"
+        android:title="All Matches"
+        android:icon="@drawable/ic_all_matches" />
+    
+    <item
+        android:id="@+id/filter_active"
+        android:title="Active Matches"
+        android:icon="@drawable/ic_active" />
+    
+    <item
+        android:id="@+id/filter_blocked"
+        android:title="Blocked Matches"
+        android:icon="@drawable/ic_blocked" />
+    
+    <item
+        android:id="@+id/filter_archived"
+        android:title="Archived Matches"
+        android:icon="@drawable/ic_archived" />
+    
+    <item
+        android:id="@+id/filter_premium"
+        android:title="Premium Matches"
+        android:icon="@drawable/ic_premium" />
+    
+    <item
+        android:id="@+id/filter_unread"
+        android:title="Unread Messages"
+        android:icon="@drawable/ic_unread" />
+    
+    <item
+        android:id="@+id/filter_nearby"
+        android:title="Nearby Matches"
+        android:icon="@drawable/ic_nearby" />
+    
+    <item
+        android:id="@+id/filter_recent"
+        android:title="Recent Matches"
+        android:icon="@drawable/ic_recent" />
+</menu>

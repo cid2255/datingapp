@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    
+    <!-- Basic Circle Background -->
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M12,2A10,10 0,1 1,2 12A10,10 0,0 1,12 2Z"/>
+    
+    <!-- Check Mark -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M9,16.17L4.83,12L6.24,10.59L9,13.35L15.76,6.59L17.17,8L9,16.17Z"/>
+    
+    <!-- Basic Text -->
+    <text
+        android:fillColor="#000000"
+        android:fontFamily="sans-serif-medium"
+        android:text="BASIC"
+        android:textSize="8sp"
+        android:x="6"
+        android:y="20"/>
+</vector>

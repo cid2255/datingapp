@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="end"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp">
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/likeChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:clickable="true"
+                android:contentDescription="@string/like_reaction"
+                android:text="👍"
+                android:textSize="18sp"
+                app:chipBackgroundColor="?attr/colorSurfaceVariant"
+                app:chipIcon="@drawable/ic_like"
+                app:chipIconSize="20dp"
+                app:chipMinHeight="32dp"
+                app:chipStartPadding="4dp"
+                app:chipEndPadding="4dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/loveChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:checkable="true"
+                android:clickable="true"
+                android:contentDescription="@string/love_reaction"
+                android:text="❤️"
+                android:textSize="18sp"
+                app:chipBackgroundColor="?attr/colorSurfaceVariant"
+                app:chipIcon="@drawable/ic_love"
+                app:chipIconSize="20dp"
+                app:chipMinHeight="32dp"
+                app:chipStartPadding="4dp"
+                app:chipEndPadding="4dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/laughChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:checkable="true"
+                android:clickable="true"
+                android:contentDescription="@string/laugh_reaction"
+                android:text="😂"
+                android:textSize="18sp"
+                app:chipBackgroundColor="?attr/colorSurfaceVariant"
+                app:chipIcon="@drawable/ic_laugh"
+                app:chipIconSize="20dp"
+                app:chipMinHeight="32dp"
+                app:chipStartPadding="4dp"
+                app:chipEndPadding="4dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/surpriseChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:checkable="true"
+                android:clickable="true"
+                android:contentDescription="@string/surprise_reaction"
+                android:text="😲"
+                android:textSize="18sp"
+                app:chipBackgroundColor="?attr/colorSurfaceVariant"
+                app:chipIcon="@drawable/ic_surprise"
+                app:chipIconSize="20dp"
+                app:chipMinHeight="32dp"
+                app:chipStartPadding="4dp"
+                app:chipEndPadding="4dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/sadChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:checkable="true"
+                android:clickable="true"
+                android:contentDescription="@string/sad_reaction"
+                android:text="😢"
+                android:textSize="18sp"
+                app:chipBackgroundColor="?attr/colorSurfaceVariant"
+                app:chipIcon="@drawable/ic_sad"
+                app:chipIconSize="20dp"
+                app:chipMinHeight="32dp"
+                app:chipStartPadding="4dp"
+                app:chipEndPadding="4dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/angryChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:checkable="true"
+                android:clickable="true"
+                android:contentDescription="@string/angry_reaction"
+                android:text="😠"
+                android:textSize="18sp"
+                app:chipBackgroundColor="?attr/colorSurfaceVariant"
+                app:chipIcon="@drawable/ic_angry"
+                app:chipIconSize="20dp"
+                app:chipMinHeight="32dp"
+                app:chipStartPadding="4dp"
+                app:chipEndPadding="4dp" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</com.google.android.material.card.MaterialCardView>

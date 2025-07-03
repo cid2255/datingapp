@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/likeChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:clickable="true"
+                android:text="👍"
+                android:textSize="18sp"
+                app:chipBackgroundColor="?attr/colorSurfaceVariant"
+                app:chipIcon="@drawable/ic_like"
+                app:chipIconSize="20dp"
+                app:chipMinHeight="32dp"
+                app:chipStartPadding="4dp"
+                app:chipEndPadding="4dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/loveChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:checkable="true"
+                android:clickable="true"
+                android:text="❤️"
+                android:textSize="18sp"
+                app:chipBackgroundColor="?attr/colorSurfaceVariant"
+                app:chipIcon="@drawable/ic_love"
+                app:chipIconSize="20dp"
+                app:chipMinHeight="32dp"
+                app:chipStartPadding="4dp"
+                app:chipEndPadding="4dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/laughChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:checkable="true"
+                android:clickable="true"
+                android:text="😂"
+                android:textSize="18sp"
+                app:chipBackgroundColor="?attr/colorSurfaceVariant"
+                app:chipIcon="@drawable/ic_laugh"
+                app:chipIconSize="20dp"
+                app:chipMinHeight="32dp"
+                app:chipStartPadding="4dp"
+                app:chipEndPadding="4dp" />
+
+            <!-- Add more reaction chips here -->
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</com.google.android.material.card.MaterialCardView>

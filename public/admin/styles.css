@@ -1,0 +1,192 @@
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding: 48px 0 0;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+    background-color: #f8f9fa;
+}
+
+/* Status badges */
+.status-badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.status-badge.pending {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.status-badge.resolved {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.status-badge.invalid {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+/* Table styles */
+.table {
+    margin-bottom: 1rem;
+}
+
+.table th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+/* Card styles */
+.card {
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+/* Modal styles */
+.modal-content {
+    border-radius: 0.5rem;
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.modal-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+/* Button group spacing */
+.btn-group > .btn {
+    margin-right: 0.5rem;
+}
+
+/* Form controls */
+.form-control:focus {
+    border-color: #0969da;
+    box-shadow: 0 0 0 0.2rem rgba(9, 105, 218, 0.25);
+}
+
+/* Status modal form */
+#statusForm .form-select {
+    margin-bottom: 1rem;
+}
+
+/* Block modal form */
+#blockForm textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* User modal form */
+#userForm input {
+    margin-bottom: 1rem;
+}
+
+/* Dashboard stats cards */
+.card.text-white {
+    color: #fff;
+}
+
+.card.text-white .card-body {
+    padding: 1.25rem;
+}
+
+.card.text-white .card-title {
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.card.text-white .card-text {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        position: static;
+        height: auto;
+    }
+    
+    .main {
+        margin-left: 0;
+    }
+}
+
+.sidebar .nav-link {
+    font-weight: 500;
+    color: #24292e;
+}
+
+.sidebar .nav-link:hover {
+    color: #0969da;
+}
+
+.sidebar .nav-link.active {
+    color: #0969da;
+}
+
+/* Main content styles */
+.main {
+    padding: 2rem;
+}
+
+/* Table styles */
+.table {
+    margin-bottom: 2rem;
+}
+
+/* Status badges */
+.status-badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.status-badge.pending {
+    background-color: #f0ad4e;
+    color: white;
+}
+
+.status-badge.approved {
+    background-color: #5cb85c;
+    color: white;
+}
+
+.status-badge.rejected {
+    background-color: #d9534f;
+    color: white;
+}
+
+/* Button styles */
+.btn-group {
+    margin-bottom: 1rem;
+}
+
+/* Modal styles */
+.modal-content {
+    border-radius: 0.5rem;
+}
+
+.modal-header {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.modal-footer {
+    border-top: 1px solid #dee2e6;
+}

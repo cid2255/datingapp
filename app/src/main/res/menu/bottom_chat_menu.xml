@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_clear_chat"
+        android:icon="@drawable/ic_delete"
+        android:title="@string/clear_chat"
+        android:orderInCategory="100" />
+    
+    <item
+        android:id="@+id/action_block_user"
+        android:icon="@drawable/ic_block"
+        android:title="@string/block_user"
+        android:orderInCategory="101" />
+    
+    <item
+        android:id="@+id/action_report_user"
+        android:icon="@drawable/ic_report"
+        android:title="@string/report_user"
+        android:orderInCategory="102" />
+    
+    <item
+        android:id="@+id/action_view_profile"
+        android:icon="@drawable/ic_person"
+        android:title="@string/view_profile"
+        android:orderInCategory="103" />
+    
+    <item
+        android:id="@+id/action_mute_user"
+        android:icon="@drawable/ic_mute"
+        android:title="@string/mute_user"
+        android:orderInCategory="104" />
+    
+    <item
+        android:id="@+id/action_archive_chat"
+        android:icon="@drawable/ic_archive"
+        android:title="@string/archive_chat"
+        android:orderInCategory="105" />
+    
+    <item
+        android:id="@+id/action_pin_message"
+        android:icon="@drawable/ic_pin"
+        android:title="@string/pin_message"
+        android:orderInCategory="106" />
+    
+    <item
+        android:id="@+id/action_copy_message"
+        android:icon="@drawable/ic_copy"
+        android:title="@string/copy_message"
+        android:orderInCategory="107" />
+    
+    <item
+        android:id="@+id/action_forward_message"
+        android:icon="@drawable/ic_forward"
+        android:title="@string/forward_message"
+        android:orderInCategory="108" />
+    
+    <item
+        android:id="@+id/action_delete_message"
+        android:icon="@drawable/ic_delete"
+        android:title="@string/delete_message"
+        android:orderInCategory="109" />
+</menu>
